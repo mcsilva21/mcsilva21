@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="kr.ac.kopo.bbs.AttachDao">
+	
+<!--   <select id="selectBbsList" resultType="BbsVo"> -->
+<!--     SELECT att_no,att_org_name,att_new_name,att_bbs_no -->
+<!--     FROM attach ORDER BY bbs_no ASC -->
+<!--   </select> -->
+
+  <select id="selectAttach" parameterType="int" resultType="AttachVo">
+  SELECT att_no,att_org_name,att_new_name,att_bbs_no
+  FROM attach 
+  WHERE att_no = #{attNo} 
+  </select>
+  
+  <insert id="insertAttach" parameterType="AttachVo">
+  insert into attach
+  (att_no,att_org_name,att_new_name,att_bbs_no)
+   values (seq_att_no.NEXTVAL,#{attOrgName},#{attNewName},#{attBbsNo}) 
+ </insert> 
+
+</mapper>
