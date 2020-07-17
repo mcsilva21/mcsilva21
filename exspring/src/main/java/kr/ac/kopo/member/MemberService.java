@@ -3,9 +3,12 @@ package kr.ac.kopo.member;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.ac.kopo.comm.PageInfo;
+import kr.ac.kopo.comm.SearchInfo;
+
 public interface MemberService {
 
-	List<MemberVo> selectMemberList();
+	List<MemberVo> selectMemberList(SearchInfo info);
 
 	MemberVo selectMember(String memId);
 
@@ -17,6 +20,6 @@ public interface MemberService {
 
 	MemberVo selectLoginMember(MemberVo memberVo);
 
-	int selectCount();
+	int selectCount(SearchInfo info);
 
 }

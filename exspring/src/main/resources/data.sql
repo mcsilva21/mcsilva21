@@ -85,6 +85,69 @@ att_no,att_org_name,att_new_name,att_bbs_no
 FROM bbs left outer join attach on bbs_no = att_bbs_no
 WHERE bbs_no = 93;
 
+--포인트 내림차순으로 정렬하여 2번쨰 부터 4전째까지만 조회
+SELECT mem_id, mem_pass, mem_name, mem_point,rnum
+from(SELECT mem_id, mem_pass, mem_name, mem_point,rownum rnum
+	from (SELECT mem_id, mem_pass, mem_name, mem_point
+	FROM member
+		order by mem_name desc)
+)
+where 2 <= rnum and rnum <=4;
+--
+SELECT mem_id, mem_pass, mem_name, mem_point,rnum
+from(SELECT mem_id, mem_pass, mem_name, mem_point,rownum rnum
+	from (SELECT mem_id, mem_pass, mem_name, mem_point
+		FROM member
+		order by mem_name desc)
+		where rownum<=4) 
+where 2 <= rnum;
+
+select * from member order by mem_name desc;
 
 
-
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('dgarbutt0', 'HkQybE', 'Dayna Garbutt', 167);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('mduffitt1', 'bWmLlRwlC', 'Man Duffitt', 487);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('kjoder2', '6Dz7zVi0', 'Kirby Joder', 263);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('djacklings3', 'JuwS7oS1', 'Devan Jacklings', 422);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('skleehuhler4', 'qQr0g2s9krdv', 'Selia Kleehuhler', 389);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('wchaunce5', 'GHn1qJ7eCg', 'Wendel Chaunce', 113);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('vdickson6', '6IJVNZ1', 'Valerie Dickson', 488);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('esuttaby7', 'i67daimH', 'Eadie Suttaby', 301);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('jinglish8', 'PHl0Q3Z', 'Jon Inglish', 328);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('idemicoli9', '7XsZxTOH', 'Idalina Demicoli', 106);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('sshillama', '35JyYZO', 'Stanly Shillam', 162);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('akeirb', '2Um3orbHbUdh', 'Ariadne Keir', 195);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('mdobbingsc', 'b8tLPJ8', 'Melisandra Dobbings', 105);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('ldignamd', 'SlDBNOg', 'Ludvig Dignam', 144);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('mtironee', 'ngpunYu5LaA', 'Mort Tirone', 455);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('mpresnallf', 'wEA76oNyV9pA', 'Mona Presnall', 159);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('rowersg', 'mDCpkAPpxoy', 'Rozalie Owers', 414);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('khickinh', 'pZeDSqw', 'Kizzee Hickin', 120);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('obrucki', 'wX9YnJ8ni6', 'Osbourne Bruck', 190);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('elemmersj', 'lKLkMjOI7', 'Euphemia Lemmers', 244);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('ekegginsk', '7csUY0errj9', 'Esmaria Keggins', 470);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('jwhybrayl', 'xYvGgQWK4GJ', 'Jyoti Whybray', 362);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('zjedraszekm', '1sVg6jsENo', 'Zachary Jedraszek', 402);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('llehrn', 'A2Hn74ujDz7', 'Lydia Lehr', 440);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('mstrasso', 'QE6hBJLdlV', 'Melisande Strass', 384);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('ccorbenp', 'IvE7V0SPK', 'Cart Corben', 391);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('trebbeckq', 'Dk5K5JH7LYwP', 'Tyrus Rebbeck', 190);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('aschirokr', '7DWtJl', 'Andris Schirok', 459);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('dwanstalls', 'RuqMkcc5b', 'Darren Wanstall', 238);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('sdelvet', 'RZsW7sOrzLX', 'Silvia Delve', 192);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('mdibbertu', 'nuRY5kh4i', 'Maxim Dibbert', 491);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('rfakesv', 'maWKoC8uw7vS', 'Rollie Fakes', 491);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('jminshullw', 'dFHPlKj', 'Junia Minshull', 201);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('ctossellx', 'tgiZ5WupCgo9', 'Christiane Tossell', 407);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('cgolsony', 'xSrP96S', 'Corrie Golson', 192);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('gsearz', 'lHejvro', 'Gregor Sear', 365);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('zmcomish10', '42w03WgI9', 'Zacharias McOmish', 374);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('lmanske11', '7KIpuORH4g24', 'Lorrayne Manske', 258);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('vchesterman12', 'ibrWT4UG8Y0', 'Vern Chesterman', 344);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('ddi13', '9yhrhWCYEbw', 'Dominique Di Pietro', 315);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('smeriguet14', 'fBv7mY', 'Sindee Meriguet', 189);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('kstretton15', 'a71GqkjmdRnh', 'Keefe Stretton', 121);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('llatour16', 'CF5dlm', 'Leighton Latour', 424);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('zbidgood17', 'SEHmrA09VTnP', 'Zared Bidgood', 213);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('kmerrett18', '1sTcqxOBqTc', 'Karlotte Merrett', 373);
+insert into member (mem_id, mem_pass, mem_name, mem_point) values ('itomovic19', 'uOPToC', 'Isabella Tomovic', 377);

@@ -10,12 +10,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ac.kopo.comm.PageInfo;
+import kr.ac.kopo.comm.SearchInfo;
 
 @Controller
 public class MemberController {
@@ -25,13 +28,15 @@ public class MemberController {
 
 //	@RequestMapping(value="/member/list.do",method = RequestMethod.GET)
 	@RequestMapping("/member/list.do")
-	public String list(Map modelMap,PageInfo pageInfo) {		
-		int num = memberService.selectCount();
-		pageInfo.setTotalRecordCount(num);
-		pageInfo.renderHTML();
+	public String list(Map modelMap, SearchInfo info) {		
+		int num = memberService.selectCount(info);
+		info.setTotalRecordCount(num);
+		info.renderHTML();
 		
-		List<MemberVo> list = memberService.selectMemberList();
+		List<MemberVo> list = memberService.selectMemberList(info);
+		
 		modelMap.put("memList", list);// 모델에 "memList"라는 이름으로 list를 저장
+		
 		return "member/memList";
 	}
 	
@@ -41,15 +46,22 @@ public class MemberController {
 	}
 
 	@RequestMapping(value = "/member/add.do", method = RequestMethod.GET)
-	public String addform() {
+	public String addform(MemberVo vo) {//필요 없지만 jsp의 폼테그에서 모델객체로 지정되어 있어서 MemberVo vo 인자를 추가
 		return "/member/memAddForm";
 	}
 
 	@RequestMapping(value = "/member/add.do", method = RequestMethod.POST)
-	public String add(MemberVo vo) {
-
+	public String add(@Valid MemberVo vo, //스프링의 객체 검증기능을 적용하고 싶은 인자앞에 @Valid 적용
+			BindingResult result) { //검증결과를 받기위해서 다음인자로 BindingResul또는 Errors타입인자를 추가
+		if(result.hasErrors()) { //검증결과 오류가 있는지 여부 확인
+			System.out.println("검증실패!");
+			return "member/memAddForm";
+		}else {
+			System.out.println("검증성공!");
+		}
+		
 		int num = memberService.insertMember(vo);
-		System.out.println(num + "개의 레코드 추가");
+		System.out.println(num + "명의 회원 추가");
 		return "redirect:/member/list.do";
 	}
 
@@ -106,4 +118,9 @@ public class MemberController {
 		return "redirect:/member/login.do";
 		
 	}
+	
+	
+	
+	
+	
 }

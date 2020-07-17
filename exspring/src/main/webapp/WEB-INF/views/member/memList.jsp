@@ -26,9 +26,34 @@
 	<c:out value="${vo.memName}"/>
 	<br/>
 	</c:forEach>
+
 	
 	
-	${pageInfo.pageHtml}
+	${searchInfo.pageHtml}
+	
+<form action="" id="searchForm">
+	<select name="searchType">	
+		<option value="id" ${searchInfo.searchType=='id'?'selected':''}>아아디</option>
+		<option value="name" ${searchInfo.searchType=='name'?'selected':''}>이름</option>	
+		
+	</select>		
+	<input type="text" name="searchWord" value="${searchInfo.searchWord}" />
+	<input type="submit" value="검색"/>
+	<input type="hidden" name="page" value="1"/>
+</form>		
+		
+<script>
+	function goPage(p){
+	document.querySelector('[name="page"]').value = p;	
+	document.querySelector('#searchForm').submit();
+}
+</script>		
+
+<!-- 1.검색조건에 '아이디+이름' 조건 추가 -->
+<!-- 2.대소문자 구별없이 검색 -->
+		
+		
 			
+<%-- location.href = '${pageContext.request.contextPath}/member/list.do?page='+p; --%>
 </body>
 </html>

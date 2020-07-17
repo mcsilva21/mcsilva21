@@ -5,13 +5,16 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import kr.ac.kopo.comm.PageInfo;
+import kr.ac.kopo.comm.SearchInfo;
+
 //<mybatis-spring:scan>에 의해서 자동으로 마이바티스 구현체를 생성해야하는 
 //인터페이스임을 표시하기 위해서 @Mapper 애노테이션 사용
 
 @Mapper
 public interface MemberDao {
 
-	List<MemberVo> selectMemberList();
+	List<MemberVo> selectMemberList(PageInfo pageInfo);
 
 	MemberVo selectMember(String memId);
 
@@ -23,6 +26,6 @@ public interface MemberDao {
 
 	MemberVo selectLoginMember(MemberVo memberVo);
 
-	int selectCount();
+	int selectCount(SearchInfo info);
 
 }

@@ -4,12 +4,20 @@
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+<!-- 	클래스패스상에 있는 message라는 이름의 프로퍼티 파일의 내용을 읽어서 스프링에서 사용하는 메세지소스(messageSource)로서 등록 -->
+	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	<beans:property name="basename" value="message"></beans:property>
+	</beans:bean>
+	
 	
 	<!-- 애노테이션을 사용하여 Spring MVC 애플리케이션을 작성할때 필요한 객체들을 자동등록 -->
 	<annotation-driven />
@@ -56,8 +64,16 @@
 			<beans:bean class="kr.ac.kopo.comm.LoginInterceptor"></beans:bean>
 		</interceptor>
 	</interceptors>
-
 	
+<!-- @Transactional를 사용한 트랜잭션 설정을 활성화 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	
+<!-- 스프링에서 트랙잭션 처리를 위한 트랜잭션매니저 객체 등록 -->
+	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">	
+	<beans:property name="dataSource" ref="dataSource"></beans:property>	
+	</beans:bean>
+		
 <!-- 	데이터베이스 연결을 담당하는 데이터소스로서 Common DBCP를 등록 -->
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 <!-- 	데이터베이스 연결에 필요한 접속 정보 설정 -->

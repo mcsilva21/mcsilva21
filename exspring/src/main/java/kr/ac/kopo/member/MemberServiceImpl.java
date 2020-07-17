@@ -6,6 +6,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import kr.ac.kopo.comm.PageInfo;
+import kr.ac.kopo.comm.SearchInfo;
+
 //이 객체를 서비스역할을 하는 객체로서  memberService 라는 이름으로 스피링에 등록
 @Service("memberService")
 public class MemberServiceImpl implements MemberService {
@@ -13,8 +16,8 @@ public class MemberServiceImpl implements MemberService {
 	private MemberDao memberDao;
 		
 	@Override
-	public List<MemberVo> selectMemberList() {				
-		return memberDao.selectMemberList();
+	public List<MemberVo> selectMemberList(SearchInfo info) {				
+		return memberDao.selectMemberList(info);
 	}
 
 	@Override
@@ -43,8 +46,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public int selectCount() {
-		return memberDao.selectCount();
+	public int selectCount(SearchInfo info) {
+		return memberDao.selectCount(info);
 	}
 	
 

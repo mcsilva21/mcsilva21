@@ -93,7 +93,12 @@
 			<version>1.4</version>
 		</dependency>
 
-
+		<!-- 스프링 객체 검증 기능을 사용하기 위한 검증기 라이브러리 -->
+		<dependency>
+		    <groupId>org.hibernate.validator</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>6.1.5.Final</version>
+		</dependency>
 
 		<!-- Logging -->
 		<dependency>

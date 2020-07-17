@@ -8,9 +8,11 @@ import java.util.UUID;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service("bbsService")
+//@Transactional // 이 클래스의 모든 메서드들에 트랜잭션을 적용하고 싶은경우
 public class BbsServiceImpl implements BbsService {
 	
 	@Resource
@@ -32,11 +34,12 @@ public class BbsServiceImpl implements BbsService {
 	}
 
 	
+	
+	@Transactional //이 메서드를 하나의 트랜잭션으로 처리(중간에 오류발생시 이전상태로 롤백)
 	@Override
 	public int insertBbs(BbsVo vo) {
 		int num = bbsDao.insertBbs(vo);
-		
-
+				
 		List<MultipartFile> fileList = vo.getUpfileList();
 		for (MultipartFile f : fileList) {
 			System.out.println(f.getOriginalFilename() + ":" + f.getSize());
