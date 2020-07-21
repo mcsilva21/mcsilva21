@@ -35,10 +35,8 @@
 	<select name="searchType">	
 		<option value="id" ${searchInfo.searchType=='id'?'selected':''}>아아디</option>
 		<option value="name" ${searchInfo.searchType=='name'?'selected':''}>이름</option>	
-<!-- 1.검색조건에 '아이디+이름' 조건 추가 -->
-<%-- 	<option value="name" ${searchInfo.searchType=='name'?'selected':' && 'id'?'selected':'}>이름+아이디</option>--%>
-<!-- 2.대소문자 구별없이 검색 -->
-<!-- Upper 이용?-->
+		<option value="all" ${searchInfo.searchType=='all'?'selected':''}>이름+아이디</option>	
+
 	</select>		
 	<input type="text" name="searchWord" value="${searchInfo.searchWord}" />
 	<input type="submit" value="검색"/>

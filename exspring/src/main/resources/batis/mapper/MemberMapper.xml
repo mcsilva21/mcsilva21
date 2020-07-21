@@ -25,11 +25,15 @@
 	<sql id="searchSQL">
 	<trim prefix="WHERE" prefixOverrides="AND|OR">					  
 			<if test="searchType != null and searchWord != null and searchType =='id'">
-				mem_id like '%' || #{searchWord} || '%'
+				LOWER(mem_id) like '%' || LOWER(#{searchWord}) || '%'
 	  		</if>
 	  		<if test="searchType != null and searchWord != null and searchType =='name'">
-				mem_name like '%' || #{searchWord} || '%'
+				LOWER(mem_name) like '%' || LOWER(#{searchWord}) || '%'
 	  		</if>
+	  		<if test="searchType != null and searchWord != null and searchType =='all'">
+				LOWER(mem_id) like '%' || LOWER(#{searchWord}) || '%' or LOWER(mem_name) like '%' || LOWER(#{searchWord}) || '%'
+	  		</if>
+	  		
 	</trim>
 	</sql>
 	
