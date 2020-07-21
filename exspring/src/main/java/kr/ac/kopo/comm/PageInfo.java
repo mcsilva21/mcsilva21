@@ -30,25 +30,27 @@ public class PageInfo {
 		
 		pageHtml +="<div>";
 		pageHtml += "<a href='#' onclick='goPage(1); return false;'>[처음]</a>";
+		if(page != 1) {
 		pageHtml += "<a href='#' onclick='goPage(" + (page-1) + "); return false;'>[이전]</a>";
-
+		}
 		for (int i = firstPageNoOnPageList; i <= lastPageNoOnPageList; i++) {
 			if (i == page) {
 				pageHtml += "<strong>{" + i + "}</strong>";
-
+				
 			} else {
 				pageHtml += "<a href='#' onclick='goPage(" + i + "); return false;'>{" + i + "}</a>";
 
 			}
+			
 		}
-
+		
+	if(page!=lastPageNoOnPageList) {
 		pageHtml += "<a href='#' onclick='goPage(" + (page+1) + "); return false;'>[다음]</a>";
 		pageHtml += "<a href='#' onclick='goPage(" + totalPageCount + "); return false;'>[마지막]</a>";
-		pageHtml +="</div>";
-		
+		pageHtml +="</div>";		
 		pageHtml += "<script>function goPage(p) {location.href = location.pathname + '?page=' +p;}</script>";
 	}
-
+	}
 	public String getPageHtml() {
 		return pageHtml;
 	}
