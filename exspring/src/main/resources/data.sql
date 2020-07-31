@@ -151,3 +151,19 @@ insert into member (mem_id, mem_pass, mem_name, mem_point) values ('llatour16', 
 insert into member (mem_id, mem_pass, mem_name, mem_point) values ('zbidgood17', 'SEHmrA09VTnP', 'Zared Bidgood', 213);
 insert into member (mem_id, mem_pass, mem_name, mem_point) values ('kmerrett18', '1sTcqxOBqTc', 'Karlotte Merrett', 373);
 insert into member (mem_id, mem_pass, mem_name, mem_point) values ('itomovic19', 'uOPToC', 'Isabella Tomovic', 377);
+
+--게시판 댓글 테이블
+CREATE TABLE reply(
+rep_no NUMBER(10,0) PRIMARY KEY, --댓글번호
+rep_content CLOB, --댓글내용
+rep_writer VARCHAR(50),--댓글작성자아이디
+rep_data DATE DEFAULT SYSDATE, --댓글작성일
+rep_bbs_no NUMBER(10,0), --댓글이속한 게시글 번호
+FOREIGN KEY (rep_writer) REFERENCES member (mem_Id),
+FOREIGN KEY (rep_bbs_no) REFERENCES bbs (bbs_no)
+);
+
+select * from reply;
+
+CREATE SEQUENCE seq_rep_no;
+SELECT seq_rep_no.NEXTVAL FROM DUAL;
