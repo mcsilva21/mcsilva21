@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20200825 css 실습</title>
+    <style>
+    .summary{
+        background-color: #ddd;     
+        padding: 30px 20px;  
+        height: 100px;        
+    }
+
+    .summary2{
+        background-color: #ddd;     
+        padding: 30px 20px;  
+        height: 250px;        
+    }
+    .summary-img{
+        float: left;
+        width: 30%;
+
+    }
+    .summary-img2{
+        float: right;
+        width: 30%;
+
+    }
+    .summary-con{
+        width: 70%;
+        float: right;
+        padding-top: 30px;
+    }
+    .cl{
+        clear: both;
+    }
+    .icon1{
+       font-size: 24px;
+       font-weight: 700;
+       color: blue;
+       background: url("img/bl.gif") no-repeat 0 10px;
+       padding-left: 30px;
+    }
+
+    .page-content{
+        margin: 50px;
+        position: relative;
+        background-color: yellow;
+        text-align: center;
+        padding: 30px;
+    } 
+
+    .page-content-img{
+        width: 500px;
+    }
+  .border-box{
+    width: 800px;
+    border: 1px solid black;  
+    padding-left: 30px;  
+
+  }
+  .icon-list li{
+      list-style: none;
+      background: url("img/bl2.gif") no-repeat;    
+      padding-left: 20px;
+      padding-top: -2px;
+  }
+  table.chart{
+      width: 100%;
+      padding: 30px;
+  }
+  .chart th{
+      background-color: rgb(243, 231, 231);
+      padding:10px 30px; 
+  }
+  .chart td{
+    text-align:center;
+    padding: 10px;
+    border-bottom:1px solid #333;
+    border-left: 1px solid#333; 
+  }
+  .chart td:first-child{
+      border-left: none;
+  }
+
+    </style>
+</head>
+
+<body>
+    
+ <div class="summary">
+     <div class="summary-img"> 
+     <img src="http://www.kopo.ac.kr/images/logo_new/daejeon.png"></div>  
+    <div class="summary-con">모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다.국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 중리령 또는 부령을 발휘할 수 있다.</div>
+</div>  
+
+
+<h3 class="icon1 cl">운영안내</h3>
+<div class="border-box">
+<ul class="icon-list">
+    <li>운영기간:상반기,하반기,겨울,여름방학 수시</li>
+    <li>운영대상:유아,학생,일반인,노인 등 전계층</li>
+    <li>운영내용:독서,문화,예술,학부모교육,문화교육,인문소향교육,사회적배려계층 프로그램 등</li>
+</ul>
+
+<ul class="icon-list"> 
+    <li>운영기간:상반기,하반기,겨울,여름방학 수시</li>
+    <li>운영대상:유아,학생,일반인,노인 등 전계층</li>
+    <li>운영내용:독서,문화,예술,학부모교육,문화교육,인문소향교육,사회적배려계층 프로그램 등</li>
+</ul>
+</div>
+<div>
+<h3 class="icon1">테이블</h3>
+<table class="chart">
+<thead>
+    <tr>
+        <th>번호</th>
+        <th>주차</th>
+        <th>시험</th>
+        <th>내용</th>
+    </tr>
+</thead>  
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>개인프로젝트</td>
+        <td>체리팜</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td colspan="2">개인프로젝트</td>
+        </tr>
+     <tr>
+         <td>1</td>
+         <td>3</td>
+         <td>개인프로젝트</td>
+         <td>도서관리</td>
+     </tr>
+    </tbody>     
+    </table>
+</table>
+
+
+<h3 class="icon1 cl">Page</h3>
+<div class="page-content">
+<p>살어리 살어리 랐다 청산에 살어리 랐다.</p>
+<img class="page-content-img" src="http://www.kopo.ac.kr/images/logo_new/daejeon.png">
+<p>살어리 살어리 랐다 청산에 살어리 랐다.</p>
+</div>
+
+<div>
+<a href="http://www.kopo.ac.kr/daejeon/index.do" target="_blank">바로 가기 </a>
+</div>
+
+<div class="summary2">
+    <div class="summary-img2"> 
+    <img src="img/l_bg.png">
+    </div>  
+   <div class="summary-con">모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다.국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 중리령 또는 부령을 발휘할 수 있다.
+    모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다.국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 중리령 또는 부령을 발휘할 수 있다.
+    모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다.국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 중리령 또는 부령을 발휘할 수 있다.
+    모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다.국무총리 또는 행정각부의 장은 소관사무에 관하여 법률이나 대통령령의 위임 또는 직권으로 중리령 또는 부령을 발휘할 수 있다.
+   </div>
+</div>  
+
+
+
+</div>
+
+</div>
+</body>
+</html>
