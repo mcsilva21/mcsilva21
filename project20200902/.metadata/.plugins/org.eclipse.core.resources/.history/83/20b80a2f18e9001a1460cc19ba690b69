@@ -1,0 +1,32 @@
+package kr.ac.kopo.login.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class RootController {
+	
+	@RequestMapping
+	String index() {
+		return "index";
+	}
+	
+	@GetMapping("/login")
+	String login() {
+		return "login";
+	}
+	
+	@PostMapping("/login")
+	String login(String id, String passwd) {
+		if("user".equals(id)&& "1234".equals(passwd)) {
+			
+		}else if ("admin".equals(id) && "6758".equals(passwd)) {
+			
+		}
+		return "redirect:";
+	}
+
+	
+}

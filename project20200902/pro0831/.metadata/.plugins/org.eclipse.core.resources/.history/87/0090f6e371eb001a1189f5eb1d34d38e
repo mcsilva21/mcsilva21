@@ -1,0 +1,9 @@
+package com.cherry.service;
+
+import com.cherry.domain.MemberVO;
+
+public interface MemberService {
+	
+	public void signup(MemberVO vo) throws Exception ;
+
+}

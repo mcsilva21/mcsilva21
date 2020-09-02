@@ -1,0 +1,19 @@
+package kr.ac.kopo.bookshop.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.ac.kopo.bookshop.model.Customer;
+
+public class CustomerDaoImpl implements CustomerDao {
+
+	@Autowired
+	SqlSession sql;
+	
+	
+	@Override
+	public int login(Customer item) {
+		return sql.selectOne("customer.login" ,item);
+	}
+
+}
