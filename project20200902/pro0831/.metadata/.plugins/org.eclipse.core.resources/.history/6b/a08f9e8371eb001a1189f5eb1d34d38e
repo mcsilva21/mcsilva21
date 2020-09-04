@@ -1,5 +1,0 @@
-package com.cherry.persistence;
-
-public class MemberDAOImpl {
-
-}

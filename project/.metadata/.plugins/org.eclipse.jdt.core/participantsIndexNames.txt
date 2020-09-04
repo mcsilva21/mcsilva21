@@ -1,7 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\GKY\project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2955475526.index
-\BookShop\src\main\java
-C:\Users\GKY\project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1122230772.index
-\Login\src\main\java
-C:\Users\GKY\project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1659179694.index
-\Study\src\main\java
