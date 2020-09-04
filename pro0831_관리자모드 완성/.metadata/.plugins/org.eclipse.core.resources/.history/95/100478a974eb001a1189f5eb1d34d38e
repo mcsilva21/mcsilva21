@@ -1,0 +1,10 @@
+package com.cherry.service;
+
+import com.cherry.domain.MemberVO;
+
+public interface MemberService {
+	
+	//회워가입
+	public void signup(MemberVO vo) throws Exception ;
+
+}
