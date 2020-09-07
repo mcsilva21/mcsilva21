@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style type="text/css">
+#footer_div{text-align: center;}
+</style>
+
+</head>
+<body>
+
+<ul>
+
+<li>사이트소개</li>
+<li>이용약괸</li>
+<li>Cherry</li>
+</ul>
+
+
+<div class="footer_div">
+<p class="p">Copyright(c) 2020 가영 All rights reserved</p>
+</div>
+
+</body>
+</html>
