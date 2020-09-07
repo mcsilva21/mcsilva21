@@ -1,0 +1,10 @@
+// 상품 소감(댓글) 목록
+@ResponseBody
+@RequestMapping(value = "/view/replyList", method = RequestMethod.GET)
+public List<ReplyVO> getReplyList(@RequestParam("n") int gdsNum) throws Exception {
+ logger.info("get reply list");
+   
+ List<ReplyVO> reply = service.replyList(gdsNum);
+ 
+ return reply;
+} 

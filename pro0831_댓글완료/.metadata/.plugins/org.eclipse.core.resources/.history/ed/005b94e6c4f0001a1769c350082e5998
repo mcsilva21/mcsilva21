@@ -1,0 +1,11 @@
+package com.cherry.service;
+
+import java.util.List;
+
+import com.cherry.domain.GoodsViewVO;
+
+public interface ShopService {
+
+	List<GoodsViewVO> list(int cateCode);
+
+}

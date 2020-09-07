@@ -1,0 +1,24 @@
+package com.cherry.controller;
+
+public class ShopController {
+	
+	 private static final Logger logger = LoggerFactory.getLogger(ShopController.class);
+	 
+	 @Inject
+	 ShopService service;
+	    
+	 // 카테고리별 상품 리스트
+	 @RequestMapping(value = "/list", method = RequestMethod.GET)
+	 public void getList(@RequestParam("c") int cateCode,
+	      @RequestParam("l") int level, Model model) throws Exception {
+	  logger.info("get llist");
+	  
+	  List<GoodsViewVO> list = null;
+	  list = service.list(cateCode);
+	 
+	  model.addAttribute("list", list);
+	  
+	 }
+	
+
+}
