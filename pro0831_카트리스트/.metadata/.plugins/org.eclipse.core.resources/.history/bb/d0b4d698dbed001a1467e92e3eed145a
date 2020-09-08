@@ -1,0 +1,5 @@
+package com.cherry.domain;
+
+public class CategoryVO {
+
+}
