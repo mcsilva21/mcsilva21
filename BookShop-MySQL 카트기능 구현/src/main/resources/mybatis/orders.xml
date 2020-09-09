@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="orders">
+
+	<sql id="search">
+		SELECT orders.*,customer.name FROM orders
+		JOIN customer ON
+		orders.custid=customer.custid
+	</sql>
+
+	<select id="total" resultType="Integer">
+
+		SELECT COUNT(*) FROM
+		(
+		<include refid="search"></include>
+		) sub
+	</select>
+
+	<select id="list" resultType="Orders">
+
+		SELECT * FROM
+		(
+		<include refid="search"></include>
+		) sub
+		ORDER BY orderid DESC
+	</select>
+
+	<select id="item" resultType="Orders">
+
+		SELECT * FROM orders
+		WHERE orderid=#{orderid}
+	</select>
+
+	<insert id="add">
+
+		INSERT INTO orders
+		VALUES (NULL, #{custid}, #{saleprice}, #{orderdate})
+	</insert>
+
+	<update id="update">
+
+		UPDATE orders
+		SET custid=#{custid},saleprice=#{saleprice}, orderdate=#{orderdate}
+		WHERE orderid=#{orderid}
+
+	</update>
+
+	<delete id="delete">
+
+		DELETE FROM orders
+		WHERE orderid=${orderid}
+
+	</delete>
+
+
+</mapper>
