@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+<aside>
+ <ul>
+  <li><a href="/admin/goods/list">상품목록</a></li>
+  <li><a href="/admin/goods/register">상품등록</a></li>
+  <li><a href="">상품소감</a></li>
+  <li><a href="">유저목록</a></li>
+ </ul>
+</aside>
+
+</body>
+</html>

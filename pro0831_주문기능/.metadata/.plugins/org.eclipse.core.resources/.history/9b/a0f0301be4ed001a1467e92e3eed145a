@@ -1,0 +1,17 @@
+package com.cherry.service;
+
+import java.util.List;
+
+import com.cherry.domain.CategoryVO;
+import com.cherry.domain.GoodsVO;
+
+public interface AdminService {
+
+	//카테고리
+	
+	public List<CategoryVO> category() throws Exception;
+	
+	//상품등록
+	public void register(GoodsVO vo) throws Exception;
+	
+}
