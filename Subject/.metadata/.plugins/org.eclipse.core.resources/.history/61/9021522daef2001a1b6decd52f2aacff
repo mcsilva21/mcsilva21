@@ -1,0 +1,54 @@
+package kr.ac.kopo.subject.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.ac.kopo.subject.dao.SubjectDao;
+import kr.ac.kopo.subject.model.Subject;
+import kr.ac.kopo.subject.util.Pager;
+
+@Service
+public class SubjectServiceImpl implements SubjectService {
+
+	@Autowired
+	SubjectDao dao;
+	
+	@Override
+	public List<Subject> getList() {
+		// TODO Auto-generated method stub
+		return dao.getList();
+	}
+
+	@Override
+	public void delete(int subid) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Subject item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Subject> list(Pager pager) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(Subject item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Subject item(int subid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
