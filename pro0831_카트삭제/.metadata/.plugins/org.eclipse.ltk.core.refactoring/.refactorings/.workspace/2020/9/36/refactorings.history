@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Cherry/src/main/webapp/resources/imgUpload&apos;" deleteContents="false" description="Delete resource &apos;Cherry/src/main/webapp/resources/imgUpload&apos;" element1="/Cherry/src/main/webapp/resources/imgUpload" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1599220988459"/>
+</session>

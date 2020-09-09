@@ -1,0 +1,5 @@
+package com.cherry.persistence;
+
+public interface AdminDAO {
+
+}
