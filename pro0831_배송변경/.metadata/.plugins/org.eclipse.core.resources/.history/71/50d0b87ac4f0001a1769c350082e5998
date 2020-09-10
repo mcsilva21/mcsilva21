@@ -1,0 +1,12 @@
+package com.cherry.persistence;
+
+import java.util.List;
+
+import com.cherry.domain.GoodsViewVO;
+
+public interface ShopDAO {
+	
+	public List<GoodsViewVO> list(int cateCode) throws 	Exceptionp;
+
+
+}
