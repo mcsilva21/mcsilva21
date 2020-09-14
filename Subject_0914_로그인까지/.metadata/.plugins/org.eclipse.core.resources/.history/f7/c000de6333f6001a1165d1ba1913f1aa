@@ -1,0 +1,60 @@
+package kr.ac.kopo.subject.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kr.ac.kopo.subject.model.Student;
+import kr.ac.kopo.subject.util.Pager;
+
+@Repository
+public class StudentDaoImpl implements StudentDao {
+	
+	@Autowired
+	SqlSession sql;
+
+	@Override
+	public Student login(Student item) {
+		
+		return sql.selectOne("student.login", item)
+	}
+
+	@Override
+	public int total(Pager pager) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Student> list(Pager pager) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(Student item) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Student item(int stuid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Student item) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int stuid) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

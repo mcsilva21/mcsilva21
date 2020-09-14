@@ -1,0 +1,8 @@
+package kr.ac.kopo.subject.model;
+
+public class subject {
+	
+	int subid;
+
+
+}
