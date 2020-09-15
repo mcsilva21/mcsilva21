@@ -1,0 +1,40 @@
+package kr.ac.kopo.subject.service;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Study;
+import kr.ac.kopo.subject.util.Pager;
+
+public class StudyServiceImpl implements StudyService {
+
+	@Override
+	public List<Study> list(Pager pager) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Study item(int studyid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Study item) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int studyid) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void add(Study item) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

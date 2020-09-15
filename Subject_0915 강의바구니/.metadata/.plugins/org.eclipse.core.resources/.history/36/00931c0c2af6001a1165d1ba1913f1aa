@@ -1,0 +1,40 @@
+package kr.ac.kopo.subject.service;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Subject;
+import kr.ac.kopo.subject.util.Pager;
+
+public class StudentServiceImpl implements SubjectService {
+
+	@Override
+	public List<Subject> list(Pager pager) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(Subject item) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Subject item(int subid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Subject item) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int subid) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

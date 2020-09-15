@@ -1,0 +1,11 @@
+package kr.ac.kopo.subject.dao;
+
+import kr.ac.kopo.subject.util.Pager;
+
+public interface SubjectDao {
+
+	int total(Pager pager);
+	
+	
+
+}

@@ -1,0 +1,21 @@
+package kr.ac.kopo.subject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import kr.ac.kopo.subject.service.StudentService;
+
+@Controller
+public class RootController {
+	
+
+	
+	@GetMapping("/")
+	String index() {
+		return "index";
+	}
+	
+
+	
+}
