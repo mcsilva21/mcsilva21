@@ -1,0 +1,5 @@
+package kr.ac.kopo.subject.service;
+
+public class SubjectServiceImpl {
+
+}

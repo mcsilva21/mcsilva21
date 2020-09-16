@@ -1,0 +1,54 @@
+package kr.ac.kopo.subject.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import kr.ac.kopo.subject.model.Subject;
+import kr.ac.kopo.subject.service.SubjectService;
+
+@Controller
+@RequestMapping("/subject")
+public class SubjectController {
+	 final String path = "subject/";
+	 
+	 @Autowired
+	 SubjectService service;
+	 
+	 @GetMapping(value = "/list")
+	 String list(Model model) {
+		 List<Subject> list = service.getList();
+		 
+		 model.addAttribute("list",list);
+		 
+		 return path + "list";
+	 }
+	 
+	 @RequestMapping(value = "/delete")
+	 String delete(int subid) {
+		 service.delete(subid);
+		 return "reidrect:list";
+	 }
+
+	
+	 
+	 @RequestMapping(value = "/update" , method = RequestMethod.GET)
+	 String update(int subid,Model model) {
+		 Subject item = service.getItem(subid);
+		 model.addAttribute("item",item);
+		 
+		 return path + "update";
+	 }
+	 
+	 @RequestMapping(value = "/update", method = RequestMethod.POST)
+	 String update(Subject item) {
+		 service.update(item);
+		 
+		 return "redirect:list";
+	 }
+}

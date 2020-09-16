@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>상세주문 화면</title>
+</head>
+<body>
+
+<div>
+	<div>
+		<h3>신청상세</h3>
+	</div>
+	
+	<div>
+		<table border="1">
+			<tbody>
+				<tr>
+					<td>주문번호</td>
+					<td></td>							
+				</tr>
+				<tr>
+					<td>고객명</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>학점</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신청일자</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="2">상세내역</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="2">주문내역이없습니다.</td>
+					<td></td>
+				</tr>				
+			
+			</tbody>
+		
+		
+		
+		
+		</table>
+		
+	</div>
+
+</div>
+
+
+</body>
+</html>

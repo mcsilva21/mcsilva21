@@ -1,0 +1,24 @@
+package kr.ac.kopo.subject.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.ac.kopo.subject.dao.SubjectDao;
+import kr.ac.kopo.subject.model.Subject;
+
+@Service
+public class SubjectServiceImpl implements SubjectService {
+
+	@Autowired
+	SubjectDao dao;
+	
+	//리스트
+	@Override
+	public List<Subject> getList() {
+		
+		return dao.getList();
+	}
+
+}

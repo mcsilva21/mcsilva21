@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bbs">
+
+<sql id="search">
+	SELECT bbs.*,student.stuname FROM bbs
+		JOIN student ON
+		bbs.bbswriter=student.stuid
+	</sql>
+	
+<insert id="add">
+		INSERT INTO bbs (bbsid,bbstitle,bbscontent,bbswriter)
+		VALUES (NULL,#{bbstitle}, #{bbscontent}, #{bbswriter})
+</insert>
+
+
+
+
+
+
+</mapper>

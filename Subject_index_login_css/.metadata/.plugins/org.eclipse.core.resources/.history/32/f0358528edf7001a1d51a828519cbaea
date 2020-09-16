@@ -1,0 +1,9 @@
+package kr.ac.kopo.subject.service;
+
+import kr.ac.kopo.subject.model.Bbs;
+
+public interface BbsService {
+
+	void add(Bbs item);
+
+}

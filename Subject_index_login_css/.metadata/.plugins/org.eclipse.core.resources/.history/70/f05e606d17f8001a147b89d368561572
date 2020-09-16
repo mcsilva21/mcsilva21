@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<link href="/resources/css/style.css" rel="stylesheet" />
+
+<style type="text/css">
+
+ nav#nav { padding:10px; text-align:right;width: 1000px; margin: 0 auto;}
+ nav#nav ul li { display:inline-block;font-size:18px; font-weight:700; width: 18%;}
+ #header_box{width: 1000px; margin: 0 auto;}
+ #nav_box{width: 1000px; margin: 0 auto; height: 100px;}
+ footer{background: #333333; color: #8e9397; height: 50px; padding-top: 10px; text-align: center; font-size: 14px; width: 1000px; margin: 0 auto;}  
+#container { padding:20px 0; border-top:2px solid #eee; border-bottom:2px solid #eee; width: 1000px; margin: 0 auto; }
+#container::after { content:""; display:block; clear:both; }  
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 50px;
+    margin: auto;
+}
+
+ 
+</style>
+
+<title>로그인</title>
+</head>
+<body>
+
+<div id="root">
+
+<header id="header">
+<div id="header_box">
+	<%@include file="include/header.jsp" %>
+</div>
+</header>
+
+<nav id="nav">
+	<div id="nav_box">
+		<%@ include file="include/nav.jsp" %>	
+	</div>
+</nav>
+<div id="container">
+	<form method="post" class="form-signin">
+		<div>
+			
+			<label>아이디<input name="stuname" type="text" placeholder="아이디를 입력해 주세요"></label>
+		</div>	
+		
+		<div>
+			<label>비밀번호</label>
+			<input name="stupass" type="password" placeholder="비밀번호를 입력해주세요">
+		</div>
+		
+		<div>
+			<input type="submit" value="로그인">
+		</div>		
+	</form>
+</div>	
+</div>
+
+
+<footer id="footer">
+	<div id="footer_box">
+		<%@ include file="include/footer.jsp" %>	
+	</div>
+</footer>
+
+</body>
+</html>

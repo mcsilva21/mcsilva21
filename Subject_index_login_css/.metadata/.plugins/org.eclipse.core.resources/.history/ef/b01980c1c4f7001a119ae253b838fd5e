@@ -1,0 +1,13 @@
+package kr.ac.kopo.subject.dao;
+
+import kr.ac.kopo.subject.model.Bbs;
+
+public class BbsDaoImpl implements BbsDao {
+
+	@Override
+	public void add(Bbs item) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

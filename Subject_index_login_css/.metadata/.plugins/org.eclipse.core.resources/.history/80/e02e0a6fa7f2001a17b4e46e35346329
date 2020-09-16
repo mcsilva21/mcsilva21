@@ -1,0 +1,15 @@
+package kr.ac.kopo.subject.dao;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Subject;
+
+public class SubjectDaoImpl implements SubjectDao {
+
+	@Override
+	public List<Subject> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
