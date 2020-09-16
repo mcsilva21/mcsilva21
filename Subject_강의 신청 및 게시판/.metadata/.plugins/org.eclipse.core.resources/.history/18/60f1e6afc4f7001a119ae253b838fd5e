@@ -1,0 +1,20 @@
+package kr.ac.kopo.subject.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.ac.kopo.subject.model.Bbs;
+
+@Service
+public class BbsServiceImpl implements BbsService {
+	
+	@Autowired
+	BbsDao dao;
+
+	@Override
+	public void add(Bbs item) {
+		dao.add(item);
+
+	}
+
+}

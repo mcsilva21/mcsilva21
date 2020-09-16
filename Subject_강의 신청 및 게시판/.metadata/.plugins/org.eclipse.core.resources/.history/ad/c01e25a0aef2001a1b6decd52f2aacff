@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="subject">
+	
+<sql id="search">
+	select * from subject order bt subid
+</sql>
+
+<select id="total" resultType="Integer">
+SELECT COUNT(*) FROM
+(<include refid="search"></include>) sub
+</select>
+
+<delete id="delete">
+	DELETE FROM subject WHERE subid=#{subid}
+</delete>
+
+<insert id="add">
+	
+	INSERT INTO subject (subid, subname, subpro)
+	VALUES (#{subid},#{subname},#{subpro})
+
+</insert>
+
+<update id="update">
+	
+	UPDATE subject
+		SET subname=#{subname}, subpro=#{subpro}
+		WHERE subid=#{subid}
+
+</update>
+
+
+<select id="item" resultType="Subject">
+
+SELECT * FROM subject WHERE subid=#{subid}
+
+</select>
+</mapper>

@@ -1,0 +1,25 @@
+package kr.ac.kopo.subject.dao;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Student;
+import kr.ac.kopo.subject.model.Subject;
+import kr.ac.kopo.subject.util.Pager;
+
+public interface StudentDao {
+
+	int total(Pager pager);
+
+	List<Subject> list(Pager pager);
+
+	void add(Subject item);
+
+	void update(Subject item);
+
+	Subject item(int stuid);
+
+	void delete(int stuid);
+
+	Student login(Student item);
+
+}

@@ -1,0 +1,24 @@
+package kr.ac.kopo.subject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class RootController {
+
+	@Autowired
+	StudnetService service;
+
+	@GetMapping("/")
+	String index() {
+		return "index";
+	}
+
+	@GetMapping("/login")
+	String login() {
+		return "login";
+
+	}
+
+}
