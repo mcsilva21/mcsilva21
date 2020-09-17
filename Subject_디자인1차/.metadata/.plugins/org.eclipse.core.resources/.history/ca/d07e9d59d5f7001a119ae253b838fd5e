@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="study">
+
+	<sql id="search">
+		select study.*,student.stuname FROM study 
+		JOIN student ON study.studyid=student.stuid
+	</sql>
+
+	<select id="total" resultType="Integer">
+		SELECT COUNT(*) FROM
+		(
+		<include refid="search"></include>
+		) sub
+	</select>
+
+	<select id="list" resultType="Study">
+		SELECT * FROM
+		(
+		<include refid="search"></include>)
+		sub
+		ORDER BY studyid DESC
+	</select>
+
+	<insert id="add">
+		INSERT INTO study
+		VALUES (NULL,#{stuid}, #{studypoint}, #{studydate})
+		
+		<selectKey keyProperty="orderid" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		
+	</insert>
+
+	<delete id="delete">
+		DELETE FROM study
+		WHERE studyid=#{studyid}
+	</delete>
+
+	<update id="update">
+		UPDATE study
+		SET stuid=#{stuid},
+		studypoint=#{studypoint},studydate=#{studydate}
+		WHERE studyid=#{studyid}
+	</update>
+
+	<select id="item" resultType="Study">
+		SELECT * FROM study
+		WHERE
+		studyid=#{studyid}
+	</select>
+
+</mapper>

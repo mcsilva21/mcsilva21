@@ -1,0 +1,9 @@
+package kr.ac.kopo.subject.service;
+
+import kr.ac.kopo.subject.model.Student;
+
+public interface StudentService {
+
+	boolean login(Student item);
+
+}

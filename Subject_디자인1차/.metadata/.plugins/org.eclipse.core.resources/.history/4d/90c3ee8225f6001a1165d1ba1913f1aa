@@ -1,0 +1,10 @@
+package kr.ac.kopo.subject.model;
+
+public class Student {
+	
+	int stuid;
+	String stuname;
+	String stupass;
+	String studepart;
+
+}
