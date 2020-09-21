@@ -1,0 +1,30 @@
+package kr.ac.kopo.subject.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.ac.kopo.subject.service.BbsService;
+
+@Controller
+@RequestMapping("/bbs")
+public class BbsController {
+	final String path = "bbs/";
+	
+	@Autowired
+	BbsService service;
+	
+	@GetMapping("/add")
+	String add() {
+		return path + "add";
+	}
+	
+	@PostMapping("/add")
+	String add(Bbs item) {
+		service.add(item);
+		return "redirect:list";
+	}
+
+}

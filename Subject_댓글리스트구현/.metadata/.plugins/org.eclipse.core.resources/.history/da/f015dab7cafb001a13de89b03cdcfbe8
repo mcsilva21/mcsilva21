@@ -1,0 +1,49 @@
+package kr.ac.kopo.subject.model;
+
+import java.util.Date;
+
+public class Reply {
+	
+	int repno; //댓글번호
+	int bbsid; //게시글번호
+	int repwriter; //댓글작성자아이디
+	String repcontent; // 내용
+	Date repdate; // 작성 날짜
+	
+	
+	public int getRepno() {
+		return repno;
+	}
+	public void setRepno(int repno) {
+		this.repno = repno;
+	}
+	public int getBbsno() {
+		return bbsno;
+	}
+	public void setBbsno(int bbsno) {
+		this.bbsno = bbsno;
+	}
+	public int getRepwriter() {
+		return repwriter;
+	}
+	public void setRepwriter(int repwriter) {
+		this.repwriter = repwriter;
+	}
+	public String getRepcontent() {
+		return repcontent;
+	}
+	public void setRepcontent(String repcontent) {
+		this.repcontent = repcontent;
+	}
+	public Date getRepdate() {
+		return repdate;
+	}
+	public void setRepdate(Date repdate) {
+		this.repdate = repdate;
+	}
+	
+	
+	
+	
+
+}

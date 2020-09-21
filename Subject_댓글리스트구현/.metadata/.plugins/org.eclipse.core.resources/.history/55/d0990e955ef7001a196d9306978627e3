@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div>
+	<h3>강의바구니</h3>
+</div>
+
+<div>
+
+	<table border=""1>
+		<thead>
+			<tr>
+				<th>강의번호</th>
+				<th>강의명</th>
+				<th>담당교수</th>
+				<th>신청갯수</th>
+				<th>학점</th>
+				<th>신청학점</th>			
+			</tr>
+		</thead>
+		
+		<tbody>
+			<c:if test="${sessionScope.cart.isEmpty()}">
+			<tr>			
+				<td colspan="7">담긴 강의가 없습니다.</td>			
+			</tr>
+			</c:if>
+			
+			<c:forEach var="item" items="${sessionScope.cart}">
+				<tr>
+					<td>${item.key}</td>
+					<td>${item.value.subname}</td>
+					<td>${item.value.subpro}</td>
+					<td>${item.value.studypoint}</td>
+					<td>${item.value.amount}</td>
+					<td>${item.value.studypoint * item.value.amount}</td>									 --%>
+				</tr>
+			</c:forEach>
+		
+		</tbody>
+		
+		
+	</table>
+<div><a href="list">목록</a></div>
+<div><a href="order">신청하기</a></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+package kr.ac.kopo.subject.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kr.ac.kopo.subject.model.Bbs;
+@Repository
+public class BbsDaoImpl implements BbsDao {
+	
+	@Autowired
+	SqlSession sql;
+
+	@Override
+	public void add(Bbs item) {
+		sql.insert("bbs.add",item);
+
+	}
+
+}
