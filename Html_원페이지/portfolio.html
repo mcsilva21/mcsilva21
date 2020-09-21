@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily's portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<style>
+*{padding: 0; margin: 0;}
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+li{
+    list-style: none;
+}
+img{border: 0;}
+
+#main_header{
+    position:relative;
+    width: 960px;
+    margin: 0 auto;
+    height: 120px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+#main_header #title{
+    /* background:rgb(241, 218, 218); */
+    position:absolute; left:0;top:20px;
+}
+#main_header #title h1{
+    font-family: 'Roboto Slab', serif;
+}
+#main_header #title p{
+    font-size: 12px;
+}
+#main_header #main_gnb{
+    position:absolute; right:0;top:20px;
+    /* background:rgb(241, 218, 218); */
+}
+#main_header #main_gnb ul li{
+    float: left;
+    padding-left: 20px;
+    color: #gray;
+}
+#main_header #main_lnb{
+    position:absolute; right:0;top:60px;
+}
+#main_header #main_lnb ul li{
+    float: left;
+    padding:20px;
+    font-weight: 700;
+}
+/* content */
+#content{
+    width: 960px;
+    margin: 0  auto;
+    margin-top: 30px;
+    height: 500px;
+}
+#content section{
+    width: 80%;
+    float: left;
+    padding:20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+#content aside{
+    width: 20%;
+    float: right;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#content aside li{
+  list-style: disc;
+}
+
+footer{
+    width: 960px;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    padding: 30px;
+}
+
+
+</style>
+
+<body>
+    <!-- header -->
+        <header id="main_header">
+            <div id="title">
+            <h1>Lily's portfolio</h1> 
+            <p>Lily</p>
+            </div>
+        <nav id="main_gnb">
+         <ul>
+            <li>Home</li>
+            <li>Email</li>
+            <li>Mobile</li>
+         </ul>
+        </nav>
+        <nav id="main_lnb">
+         <ul>
+            <li>Lily</li>
+            <li>portfolio</li>
+            <li>contact</li>
+         </ul>
+         </nav>
+</header>
+
+<!-- contents -->
+    <div id="content">
+        <section>
+            <article>
+                <h2>Intro</h2>
+                    <p>공가영(91.11.26)</p><br>
+                    <p>단국대 중국어과 졸업</p><br>
+                    <p>15년4월~18년4월년(주)드림텍 구매팀 SCM담당 </p><br>
+                    <p>18년8월~20년3월 안성상공회의소 행정안전부 지역정착형일자리 프로젝트매니저 </p><br>
+                    <p>202년3월 폴리텍대학 대전캠퍼스 스마트소프트웨어 하이테크과정 수료중 </p><br>
+            </article>
+            <article>
+                <h2>License</h2>
+                <p>HSK6급</p><br>
+                <p>Toeic 720점</p><br>
+                <p>무역관리사</p><br>
+                <p>정보처리산업기사</p><br>
+            </article>
+            <article>
+                <h2>Project</h2>
+                    <p>대전 소모임 사이트 Hassue<a href="https://blog.naver.com/mcsilva21/222046037602">동영상보기</a>
+                    </p>
+            </article>
+        </section>
+        <aside>
+            <ul>
+                <h3>I can Do!</h3>
+                <li>JAVA</li>
+                <li>JavaScript</li>
+                <li>CSS & HTML</li>
+                <li>springFramework</li>
+                <li>Oracle</li>
+            </ul>
+
+        </aside>
+    </div>
+    <!-- FOOTER -->
+        <footer>Copyright(c) 2020 Lily All rights reserved
+            <br>개발 꿈나무 공가영
+        </footer>
+</body>
+</html>

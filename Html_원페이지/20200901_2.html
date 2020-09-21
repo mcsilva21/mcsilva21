@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습</title>
+
+<style>
+*{padding: 0; margin: 0;}
+
+#wrap{
+        width: 100%; border: 4px solid #000; margin: 0 auto;
+}
+#header{
+    background:yellow;
+    height: 100PX;   
+}
+
+#contents{
+
+}
+#left{
+    width: 20%;
+    background:red;
+    height: 500px;
+    float: left;
+}
+#center{
+    width: 60%;
+    background:blue;
+    height: 500px;
+    float: left;
+}
+#right{
+    width: 20%;
+    background:green;
+    height: 500px;
+    float: right;
+}
+#footer{
+    background:gray;
+    height: 100px;
+    clear: both;
+}
+
+</style>
+
+</head>
+<body>
+    
+
+<div id="wrap">
+
+    <header id="header">
+        <h1>개꿈이의 HTML & CSS</h1>
+
+    </header>
+    <section id="contents">
+
+        <article id="left">왼쪽 영역</article>
+        <article id="center">가운데 영역</article>
+        <article id="right">오른쪽 영역</article>
+
+    </section>
+    <footer id="footer">footer</footer>
+
+</div>
+
+</body>
+</html>

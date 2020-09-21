@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4주차_레이아웃(디자인)</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Nanum Myeongjo', serif;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*초기화 코드-끝*/
+#header_wrap{background: url("images/top_bg.jpg");
+            height:180px ;
+}
+
+header{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+h1{
+    padding: 30px 0;
+}
+nav{
+    margin-top: 45px;
+}
+
+li{
+    display: inline-block;
+    font-weight: bold;
+    padding-right: 20px;
+}
+a{
+    color: #ffffff;
+}
+a:hover{
+color: rgba(241, 207, 13, 0.884);
+text-shadow: 5px 5px 5px #000000;
+}
+
+.top_img{
+    position: absolute;right:0; top: 40px;
+}
+h2{
+    font-size: 2em; /*1em=16px*/
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+}
+
+section{
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 120px;   
+}
+article{
+    float: left;
+    margin: 1px;
+    text-align: center;
+}
+.con-tex{
+    text-align: justify;
+    padding: 20px 0;
+    line-height: 28px;
+}
+
+footer{
+    width: 100%;
+    margin-top: 20px;
+    background: rgb(5, 7, 83);
+    padding: 30px 0;
+    text-align: center;
+    color: honeydew;
+    font-weight: 700;
+}
+.cb{
+    clear: both;
+}
+
+    </style>
+</head>
+<body>
+    
+    <!--header start-->
+    <div id="header_wrap">
+        <header>
+            <h1 style="color: #ffffff;font-size: 50px;"><a href="#">Lily's Portfolio</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Lily's info</a></li>
+                    <li><a href="https://blog.naver.com/mcsilva21">Blog</a></li>
+                    <li><a href="https://github.com/mcsilva21">Github</a></li>
+                    <li><a href="#">Note</a></li>
+
+                </ul>
+
+            </nav>
+            <div><img class="top_img" src="images/top_img.png" alt="포트 폴리오 화면"></div>
+        </header>
+    </div>
+     <!--header end-->
+
+    <section>     
+            <h2>Portfolio</h2>
+            <article class="po_img">
+                <img src="images/hassue.PNG" alt="하슈-프로젝트" width="310px", height="200px">
+                <p>대전 소모임 창설 사이트 하슈</p>
+            </article>
+            <article class="po_img">
+                <img src="images/cherryfarm.PNG" alt="체리팜-프로젝트" width="310px", height="200px">
+                <p>국내 체리 판매 사이트  체리팜</p>
+            </article>
+            <article> 
+                <img src="images/p_img_03.jpg" alt="포스코-프로젝트">
+                <p>포스코-프로젝트 교수님작품</p>
+            </article>
+            <article class="po_img">
+                <img src="images/p_img_04.jpg" alt="충남도서관-프로젝트">
+                <p>충남도서관-프로젝트 교수님작품</p>
+            </article>
+            <article class="po_img">
+                <img src="images/p_img_05.jpg" alt="스마트스쿨-프로젝트">
+                <p>스마트스쿨 프로젝트 교수님작품</p>
+            </article>
+            <article class="po_img">
+                <img src="images/p_img_06.jpg" alt="세계수영대회-프로젝트">
+                <p>세계수영대회-프로젝트 교수님작품</p>
+            </article>
+    </section>
+    <section class="cb">
+        <h2>Lily info</h2>
+        <p class="cont-text">저는 개발자가 되기 위해 다양한 역량을 강화하였습니다.
+            <br>
+            <br>
+            첫째, 다양한 프로그래밍 언어를 공부하며 프로그래밍 기반을 다졌습니다. JAVA를 기반으로 웹 개발에 필요한 Oracle, MySQL, HTML, CSS, JSP, Java Script, Spring framework, 등의 다양한 언어를 경험해보았으며 소규모 프로젝트에 직접 참여하여 응용하였고, 정보처리산업기사 자격증을 취득하여 소프트웨어 개발 직무를 수행할 수 있는 기본 실력이 갖추어졌음을 증명하였습니다.
+            <br>
+            <br>
+            둘째, 학창시절과 다양한 사회 프로젝트를 진행하며 팀워크를 강화했습니다. 
+            정확하고 진실한 정보를 가지고 팀원들과 협업을 하면 업무적 효율이 높아진다고 생각합니다,
+            처음 진행한 팀 프로젝트에서는 팀장으로써, 개발과 퍼블리싱을 분리해 진행하며 팀원과 갈등 해결과 의견을 조율하였습니다.
+            <br>
+            <br>
+            셋째, 기록하는 개발자
+            웹 프로그래밍을 공부하고부터 , 직접 운영하는 블로그에 개발하면서 느낀 점과 자주 하는 실수 등을 기록하였습니다.
+            처음에는 404, 500번 에러가 뜨면 무조건 교수님의 도움을 받았지만, 에러를 기록하고, 스스로 해결하고자 하면서 코드를 이해할 수 있었고 프로젝트에 응용하여 완성도를 높일 수 있었습니다.
+            </p>
+    </section>
+
+    <!-- FOOTER -->
+  
+      <footer>
+          <p>Copyright(c) 2020 Lily(개발꿈나무) All rights reserved</p>
+    </footer>
+
+
+
+</body>
+</html>
