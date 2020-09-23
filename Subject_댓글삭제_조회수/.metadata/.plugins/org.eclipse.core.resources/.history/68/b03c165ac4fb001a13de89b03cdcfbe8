@@ -1,0 +1,12 @@
+package kr.ac.kopo.subject.dao;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Reply;
+
+public interface ReplyDao {
+
+	List<Reply> list(int bbsno);
+
+	
+}

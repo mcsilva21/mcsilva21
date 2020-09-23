@@ -1,0 +1,15 @@
+package kr.ac.kopo.subject.dao;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Reply;
+
+public class ReplyDaoImpl implements ReplyDao {
+
+	@Override
+	public List<Reply> list(int bbsno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
