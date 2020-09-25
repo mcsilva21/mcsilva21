@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <style>
+
+        .red{
+            background-color: red;
+        }
+
+    </style>
+
+
+<script>
+        let counter =0;
+
+                window.onload = function () {
+
+                const add = document.getElementById("add");
+
+                //add.textContent="Hello"; //text는 태그가 불가능함
+
+                add.innerHTML="<b>ADD</b>"; // 태그,텍스트 둘다 인식
+
+                add.addEventListener("click", function(){ //add버튼 속성 시작 ///addEventListener 하나의 이벤트의 여러가지 리스너가 있을 수 있도록 생성
+                        const ul = document.querySelector("ul"); //처음 ul만 찾고 리턴
+
+                       if(counter == 0) 
+                        ul.innerHTML ="";
+
+                        ul.innerHTML += "<li><input type='checkbox'>"+ ++counter +"</li>";
+
+                }); //add버튼 속성 끝
+
+                const button = document.querySelectorAll("button"); //버튼 모든것을 리턴
+                button.forEach(function(value,key){ //value=button ,  
+                    value.onclick = function(){ //클릭응 했을때 value값을 실행
+                        value.classList.toggle("red"); //red가 있으면 빼고, 없으면 추가 CSS의 CLASS에 TOGLE을 실행  ==> 
+
+                    }
+                }); 
+
+                const remove = document.getElementById("delete");
+                remove.addEventListener("click",function() {
+                    const checked = document.querySelectorAll("input:checked[type='checkbox']"); //채크된 체크박스를 찾음
+                    checked.forEach(function(value, key){
+                        value.parentElement.remove(); //input의 부모는 li >> dom에서 사라져 주세요
+                    });
+                    
+                });
+        };
+
+
+</script>
+
+
+</head>
+<body>
+    <button id="add">추가</button>
+    <button id="delete">삭제</button>
+
+    <div>
+        <div>
+            <ul>등록된 애용이 없습니다</ul>
+        
+        
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>
