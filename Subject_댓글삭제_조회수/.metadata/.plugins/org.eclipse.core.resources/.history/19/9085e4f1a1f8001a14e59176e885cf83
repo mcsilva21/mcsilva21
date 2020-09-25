@@ -1,0 +1,7 @@
+package kr.ac.kopo.subject.model;
+
+public class Snippet {
+	insert into reply(repno, bbsno, repcontent, repwriter)
+	    values(null,16,댓글테스트,1);
+}
+

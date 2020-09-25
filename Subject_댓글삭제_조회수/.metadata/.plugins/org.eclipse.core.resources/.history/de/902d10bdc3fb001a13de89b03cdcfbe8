@@ -1,0 +1,25 @@
+package kr.ac.kopo.subject.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kr.ac.kopo.subject.model.Reply;
+
+@Repository
+public class ReplyDaoImpl implements ReplyDao {
+	
+	@Autowired
+	SqlSession sql;
+
+	@Override
+	public List<Reply> list(int bbsno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

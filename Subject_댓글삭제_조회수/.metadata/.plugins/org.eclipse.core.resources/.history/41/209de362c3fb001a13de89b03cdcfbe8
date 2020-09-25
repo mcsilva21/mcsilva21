@@ -1,0 +1,35 @@
+package kr.ac.kopo.subject.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.ac.kopo.subject.model.Reply;
+import kr.ac.kopo.subject.service.ReplyService;
+
+@Controller
+@RequestMapping("/reply")
+public class ReplyController {
+	final String path = "reply/";
+	
+	@Autowired
+	ReplyService service;
+	
+	@GetMapping("/list")
+	String list(Model model, Integer bbsno) {
+		List<Reply> list = service.list(bbsno);
+		model.addAttribute("list",list);
+		return path +"list";
+	}
+	
+	}
+
+	
+	
+	
+	
+

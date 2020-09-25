@@ -1,0 +1,15 @@
+package kr.ac.kopo.subject.service;
+
+import java.util.List;
+
+import kr.ac.kopo.subject.model.Reply;
+
+public class ReplyServiceImpl implements ReplyService {
+
+	@Override
+	public List<Reply> list(int bbsno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
