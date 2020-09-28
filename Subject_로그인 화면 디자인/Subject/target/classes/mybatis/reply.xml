@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="reply">
+
+	<insert id="writeReply">
+		INSERT INTO reply
+		VALUES (NULL,#{bbsid},#{repwriter},#{repcontent},now())
+	</insert>
+
+
+	<select id="readReply" resultType="Reply">
+	
+		SELECT 
+		repno, bbsid, repwriter,repcontent,repdate 
+		from reply
+			where bbsid = #{bbsid}
+				order by repdate desc		
+	</select>
+	
+<select id="readReplySelect" resultType="Reply">
+SELECT bbsid,repno,repwriter,repcontent,repdate FROM reply WHERE repno=#{repno}
+</select>
+	
+	<update id="updateReply">
+	UPDATE reply SET repcontent=#{repcontent} WHERE repno=#{repno};
+	</update>
+	
+	<delete id="deleteReply">
+		delete from reply where repno = #{repno}
+	</delete>
+	
+</mapper>

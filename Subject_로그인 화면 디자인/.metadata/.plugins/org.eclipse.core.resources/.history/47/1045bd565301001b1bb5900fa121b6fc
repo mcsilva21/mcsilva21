@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+a{color: #red; text-decoration: none;}
+a:hover{color: rgba(241, 207, 13, 0.884);}
+</style>
+
+</head>
+<body>
+
+<h1 class="title">
+	<a href="/" style="color: #black; font-size:45px;">신청해유~</a>
+
+</h1>
+
+</body>
+</html>

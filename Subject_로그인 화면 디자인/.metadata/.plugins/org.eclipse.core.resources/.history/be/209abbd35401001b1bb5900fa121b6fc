@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style type="text/css">
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: 46px;
+</style>
+
+</head>
+<body>
+
+<h1 class="title">
+	<a href="/" style="color:#000; text-decoration: none;">Click~</a>
+
+</h1>
+
+</body>
+</html>
