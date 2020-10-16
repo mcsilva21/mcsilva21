@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bbs">
+
+<sql id="search">
+	SELECT bbs.*,student.stuname FROM bbs
+		JOIN student ON
+		bbs.bbswriter=student.stuid
+	</sql>
+	
+	<select id="total" resultType="Integer">
+
+		SELECT COUNT(*) FROM
+		(
+		<include refid="search"></include>
+		) sub
+	</select>
+	
+	<select id="list" resultType="Bbs">
+
+		SELECT * FROM
+		(
+		<include refid="search"></include>
+		) sub
+		ORDER BY bbsid DESC
+	</select>
+	
+<insert id="add">
+		INSERT INTO bbs (bbsid,bbstitle,bbscontent,bbswriter,bbsdate)
+		VALUES (NULL,#{bbstitle},#{bbscontent},#{bbswriter},now())
+</insert>
+
+<select id="item" resultType="Bbs">
+	SELECT bbs.*,student.stuname FROM bbs
+		JOIN student ON
+		bbs.bbswriter=student.stuid WHERE bbsid=#{bbsid}
+	</select>
+
+
+<update id="update">
+
+		UPDATE bbs SET 
+		bbstitle=#{bbstitle},bbscontent=#{bbscontent},bbsdate=NOW() WHERE bbsid=#{bbsid};
+
+	</update>
+	
+	
+	<delete id="delete">
+
+		DELETE FROM bbs
+		WHERE bbsid=${bbsid}
+
+	</delete>
+
+
+	<update id="count">
+	
+	UPDATE bbs SET bbscnt = bbscnt+1 WHERE bbsid=#{bbsid};
+	
+	</update>
+
+</mapper>
