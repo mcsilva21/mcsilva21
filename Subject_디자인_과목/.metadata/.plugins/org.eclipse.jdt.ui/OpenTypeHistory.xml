@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.dao{SubjectDao.java[SubjectDao" modifiers="513" timestamp="1599664632000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.service{SubjectService.java[SubjectService" modifiers="513" timestamp="1600048750000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.service{StudentService.java[StudentService" modifiers="513" timestamp="1600174280000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1600050946000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.service{StudyService.java[StudyService" modifiers="513" timestamp="1600219386000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.dao{StudyDao.java[StudyDao" modifiers="513" timestamp="1600171396000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.dao{DetailDao.java[DetailDao" modifiers="513" timestamp="1600220688000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.service{BbsService.java[BbsService" modifiers="513" timestamp="1600852142000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.dao{BbsDao.java[BbsDao" modifiers="513" timestamp="1600852086000"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.service{ReplyService.java[ReplyService" modifiers="513" timestamp="1600835794000"/>
+    <typeInfo handle="=Subject/C:\/Users\/GKY\/.m2\/repository\/mysql\/mysql-connector-java\/5.1.49\/mysql-connector-java-5.1.49.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/mysql-connector-java-5.1.49.jar=/=/maven.groupId=/mysql=/=/maven.artifactId=/mysql-connector-java=/=/maven.version=/5.1.49=/=/maven.scope=/compile=/&lt;com.mysql.jdbc.jmx(ReplicationGroupManagerMBean.class[ReplicationGroupManagerMBean" modifiers="1537" timestamp="1599194571182"/>
+    <typeInfo handle="=Subject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.ac.kopo.subject.dao{ReplyDao.java[ReplyDao" modifiers="513" timestamp="1600835734000"/>
+</typeInfoHistroy>
