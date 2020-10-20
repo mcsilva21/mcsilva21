@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+
+</head>
+<body>
+
+<h1 class="title">
+	<a href="/">Poly Click</a>
+</h1>
+
+<div>
+<ul>
+<c:if test="${user == null}">
+ <li>
+  <a href="/login"><button type="button" class="btn btn-primary">로그인</button></a>
+ </li>
+<!--  <li> -->
+<!--   <a href="/student/add"><button type="button" class="btn btn-danger">학생등록</button></a> -->
+<!--  </li> -->
+ </c:if>
+ 
+ <c:if test="${sessionScope.user != null}">
+			<div>
+				<a href="logout">로그아웃</a> 
+				(${sessionScope.user.stuname})님 접속하셨습니다.
+			</div>
+		
+			</c:if>
+ 
+ </ul>
+</div>
+
+</body>
+</html>
